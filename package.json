@@ -1,0 +1,9 @@
+{
+  "name": "jenkins-test-app",
+  "version": "1.0.0",
+  "description": "Simple app to test Jenkins Docker pipeline",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
