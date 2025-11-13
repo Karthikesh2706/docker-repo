@@ -7,11 +7,12 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/Karthikesh2706/docker-repo.git'
-            }
-        }
+       stage('Checkout Code') {
+    steps {
+        git branch: 'main', url: 'https://github.com/Karthikesh2706/docker-repo.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
