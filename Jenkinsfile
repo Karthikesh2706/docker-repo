@@ -3,13 +3,13 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
-        IMAGE_NAME = 'karthikesh03/sample-app'
+        IMAGE_NAME = 'karthikesh03/docker-repo'
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-github-username/your-repo.git'
+                git 'https://github.com/Karthikesh2706/docker-repo.git'
             }
         }
 
@@ -34,10 +34,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Image pushed successfully to Docker Hub!'
+            echo '✅ Docker image built and pushed successfully to Docker Hub!'
         }
         failure {
-            echo '❌ Build failed!'
+            echo '❌ Build failed. Check console logs for details.'
         }
     }
 }
